@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Manager Pro</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer type="module"></script>
+</head>
+<body>
+    <button class="mobile-toggle" onclick="toggleSidebar()">
+        ☰
+    </button>
+
+    <main class="container">
+        <aside class="sidebar" id="sidebar">
+            <h1>Product Manager Pro</h1>
+            <nav>
+                <ul>
+                    <li><a href="#dashboard">📊 Dashboard</a></li>
+                    <li><a href="#products">📦 All Products</a></li>
+                    <li><a href="#add-product">➕ Add Product</a></li>
+                    <li><a href="#update-product">✏️ Update Product</a></li>
+                    
+                
+                </ul>
+            </nav>
+        </aside>
+
+        <div class="content">
+            <div class="header">
+                <h1 class="title">Product Catalog</h1>
+                <p>Manage your product inventory with ease</p>
+                
+                <div class="search-container">
+                    <input type="text" placeholder="Search products..." class="search-bar" id="searchInput">
+                    <button class="search-button" onclick="searchProducts()">Search</button>
+                </div>
+            </div>
+
+            <div class="stats">
+                <div class="stat-card">
+                    <div class="stat-number">24</div>
+                    <div class="stat-label">Total Products</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">8</div>
+                    <div class="stat-label">Categories</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">$2,450</div>
+                    <div class="stat-label">Total Value</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">92%</div>
+                    <div class="stat-label">In Stock</div>
+                </div>
+            </div>
+
+            <section class="product-grid" id="productGrid">
+                <!-- Products will be dynamically generated -->
+            </section>
+        </div>
+    </main>
+
+  
+</body>
+</html>
