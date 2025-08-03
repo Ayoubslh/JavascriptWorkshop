@@ -26,7 +26,7 @@
             padding: 2rem 1.5rem;
             box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
             position: fixed;
-            height: 100vh;
+           
             overflow-y: auto;
             transition: transform 0.3s ease;
         }
@@ -66,6 +66,10 @@
             color: white;
             transform: translateY(-2px);
             box-shadow: 0 4px 20px rgba(79, 70, 229, 0.3);
+        }
+        .sidebar nav a.active {
+            background: linear-gradient(135deg, #4f46e5, #7c3aed);
+            color: white;
         }
 
         .content {
@@ -278,6 +282,139 @@
             font-weight: 500;
             margin-top: 0.5rem;
         }
+       
+        #addForm {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            margin-top: 2rem;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(20px);
+            padding: 2rem;
+            border-radius: 16px;
+        }
+        #addForm input,
+        #addForm textarea {
+            padding: 0.75rem;
+            border: 2px solid #e5e7eb;
+            border-radius: 8px;
+            font-size: 1rem;
+            outline: none;
+            transition: all 0.3s ease;
+        }
+        #addForm input:focus,
+        #addForm textarea:focus {
+            border-color: #4f46e5;
+            box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.1);
+        }
+        #addForm button {
+            padding: 0.75rem;
+            background: linear-gradient(135deg, #4f46e5, #7c3aed);
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }   
+
+
+.edit-modal {
+  
+    display: none;
+    position: fixed;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    width: 100vw;
+    height: 100%;
+}
+
+        .modal-content {
+            background: white;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            width: 400px;
+        }
+        .modal-content h2 {
+            margin-bottom: 1rem;
+            color: #4f46e5;
+        }
+        .modal-content input {
+            width: 100%;
+            padding: 0.75rem;
+            border: 2px solid #e5e7eb;
+            border-radius: 8px;
+            margin-bottom: 1rem;
+            font-size: 1rem;
+        }
+        .modal-content input:focus {
+            border-color: #4f46e5;
+            box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.1);
+        }
+        .modal-content textarea {
+            width: 100%;
+            padding: 0.75rem;
+            border: 2px solid #e5e7eb;
+            border-radius: 8px;
+            margin-bottom: 1rem;
+            font-size: 1rem;
+            resize: vertical;
+        }
+        .modal-content textarea:focus {
+            border-color: #4f46e5;
+            box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.1);
+        }
+        .modal-content button {
+            width: 100%;
+            padding: 0.75rem;
+            background: linear-gradient(135deg, #4f46e5, #7c3aed);
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        .modal-content button:hover {
+            background: #4338ca;
+            transform: translateY(-1px);
+        }
+        .modal-content .file-input {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-bottom: 1rem;
+            padding: 0.75rem;
+            border: 2px dashed #e5e7eb;
+            border-radius: 8px;
+            background: rgba(255, 255, 255, 0.8);
+            cursor: pointer;
+        }
+         .active {
+            display: block;
+        }
+        .tab-content {
+            display: none;
+        }
+        .tab-content.active {
+            display: block;
+        }
+
+        .edit-modal .modal-close {
+            width: 50px;
+            float: right;
+           
+            cursor: pointer;
+            
+            color: #fefdff;
+        }
+
 
         @media (max-width: 768px) {
             .mobile-toggle {

@@ -1,27 +1,99 @@
-
- const items = [
-     {
-            id: 1,
-            name: "Product 1",
-            price: 29.99,
-            image: "https://via.placeholder.com/150",
-            category: "Category 1",
-            description: "This is a description for Product 1."
-        },
-        {
-            id: 2,
-            name: "Product 2",
-            price: 39.99,
-            image: "https://via.placeholder.com/150",
-            category: "Category 2",
-            description: "This is a description for Product 2."
-        },
-        {
-            id: 3,
-            name: "Product 3",
-            price: 49.99,
-            image: "https://via.placeholder.com/150",
-            category: "Category 3",
-            description: "This is a description for Product 3."
-        }
-    ];
+const products = [
+  {
+    id: 1,
+    name: "ASUS Gaming Laptop",
+    description: "High-performance gaming laptop with RTX graphics",
+    price: 1299,
+    image: "💻",
+    category: "Electronics",
+  },
+  {
+    id: 2,
+    name: "Huawei Smartphone",
+    description: "Latest Android smartphone with amazing camera",
+    price: 699,
+    image: "📱",
+    category: "Electronics",
+  },
+  {
+    id: 3,
+    name: "Wireless Headphones",
+    description: "Premium noise-canceling wireless headphones",
+    price: 299,
+    image: "🎧",
+    category: "Audio",
+  },
+  {
+    id: 4,
+    name: "Smart Watch",
+    description: "Fitness tracking smartwatch with heart rate monitor",
+    price: 199,
+    image: "⌚",
+    category: "Wearables",
+  },
+  {
+    id: 5,
+    name: "Tablet Pro",
+    description: "Professional tablet for creative work and productivity",
+    price: 899,
+    image: "📱",
+    category: "Electronics",
+  },
+  {
+    id: 6,
+    name: "Gaming Mouse",
+    description: "RGB gaming mouse with programmable buttons",
+    price: 79,
+    image: "🖱️",
+    category: "Gaming",
+  },
+  {
+    id: 7,
+    name: "Mechanical Keyboard",
+    description: "Premium mechanical keyboard with RGB lighting",
+    price: 149,
+    image: "⌨️",
+    category: "Gaming",
+  },
+  {
+    id: 8,
+    name: "4K Monitor",
+    description: "Ultra-wide 4K monitor for professionals",
+    price: 549,
+    image: "🖥️",
+    category: "Displays",
+  },
+  {
+    id: 9,
+    name: "Bluetooth Speaker",
+    description: "Portable waterproof Bluetooth speaker",
+    price: 89,
+    image: "🔊",
+    category: "Audio",
+  },
+  {
+    id: 10,
+    name: "External SSD",
+    description: "Fast external SSD with 1TB storage",
+    price: 159,
+    image: "💾",
+    category: "Storage",
+  },
+  {
+    id: 11,
+    name: "Webcam HD",
+    description: "1080p HD webcam for video calls",
+    price: 69,
+    image: "📹",
+    category: "Electronics",
+  },
+  {
+    id: 12,
+    name: "USB-C Hub",
+    description: "Multi-port USB-C hub with HDMI and ethernet",
+    price: 49,
+    image: "🔌",
+    category: "Accessories",
+  },
+];
+export default products;
