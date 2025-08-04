@@ -1,292 +1,141 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Stream</title>
-    <link rel="stylesheet" href="./../styles/home.css">
-    <script src="./../scripts/home.js" defer type="module"></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>StreamX</title>
+   
+    <link rel="stylesheet" href="./../styles/home.css" />
 </head>
 <body>
-    <nav>
-        <div class="nav-container">
-            <div class="logo">Stream</div>
-            <ul class="nav-links">
-                <li><a href="#home" class="active">Home</a></li>
-                <li><a href="#movies">Movies</a></li>
-                <li><a href="#series">Series</a></li>
-                <li><a href="#about">About</a></li>
-            </ul>
-        </div>
-    </nav>
+  <!-- Header -->
+  <header>
+    <div class="container">
+      <h1>StreamX</h1>
+      <nav>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Movies</a></li>
+          <li><a href="#">TV Shows</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
 
-    <section class="hero" id="home">
-        <div class="hero-content">
-            <div class="hero-text">
-                <h1>Dune: Part Two</h1>
-                <div class="hero-meta">
-                    <div class="rating">
-                        <span class="stars">★★★★★</span>
-                        <span>8.5</span>
-                    </div>
-                    <span>2024</span>
-                    <span>166 min</span>
-                </div>
-                <p class="hero-description">
-                    Paul Atreides unites with Chani and the Fremen while seeking revenge against the conspirators who destroyed his family.
-                </p>
-                <div class="hero-buttons">
-                    <button class="btn btn-primary">▶ Play</button>
-                    <button class="btn btn-secondary">+ My List</button>
-                </div>
-            </div>
-            <div class="hero-poster">
-                <img src="https://images.unsplash.com/photo-1536440136628-849c177e76a1?w=400&h=600&fit=crop" alt="Dune: Part Two">
-            </div>
-        </div>
+  <main>
+    <!--Add Carousel-->
+<div class="carousel-container">
+  <div class="carousel-wrapper" id="carousel">
+    <div class="carousel-slide" style="background-image: url('./../assets/interstellar.jpeg');">
+      <div class="content">
+        <h2>Interstellar</h2>
+        <p>Journey beyond the stars.</p>
+      </div>
+    </div>
+    <div class="carousel-slide" style="background-image: url('./../assets/openh.jpeg');">
+      <div class="content">
+        <h2>Oppenheimer</h2>
+        <p>The father of the atomic bomb.</p>
+      </div>
+    </div>
+    <div class="carousel-slide" style="background-image: url('./../assets/superman.jpeg');">
+      <div class="content">
+        <h2>Superman</h2>
+        <p>The Man of Steel returns.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Controls -->
+  <button class="carousel-btn left" id="prevBtn">&#10094;</button>
+  <button class="carousel-btn right" id="nextBtn">&#10095;</button>
+</div>
+
+
+
+
+
+  <button class="carousel-control-next" type="button" data-bs-target="#mainCarousel" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+
+    <!-- Description -->
+    <section class="desc-section text-center">
+      <h2>Welcome to StreamX</h2>
+      <p>StreamX brings you the latest and greatest in film and TV from around the world. Curated collections. Infinite genres. Pure cinema.</p>
     </section>
 
-    <main>
-        <section class="categories">
-            <h2 class="section-title">Browse</h2>
-            <div class="categories-grid">
-                <div class="category">
-                    <h3>Action</h3>
-                </div>
-                <div class="category">
-                    <h3>Drama</h3>
-                </div>
-                <div class="category">
-                    <h3>Comedy</h3>
-                </div>
-                <div class="category">
-                    <h3>Thriller</h3>
-                </div>
-                <div class="category">
-                    <h3>Sci-Fi</h3>
-                </div>
-                <div class="category">
-                    <h3>Horror</h3>
-                </div>
-                <div class="category">
-                    <h3>Romance</h3>
-                </div>
-                <div class="category">
-                    <h3>Animation</h3>
-                </div>
-            </div>
-        </section>
+    <!-- Discover + Search -->
+    <div class="discover-header">
+      <h1>Discover Movies</h1>
+      <ul>
+        <li><a href="#">Random</a></li>
+        <li><a href="#">Popular</a></li>
+        <li><a href="#">Recent</a></li>
+      </ul>
+      <input type="text" placeholder="Search for movies..." />
+    </div>
 
-        <section class="movie-section" id="movies">
-            <div class="section-header">
-                <h2 class="section-title">Trending</h2>
-                <a href="#" class="view-all">View all</a>
-            </div>
-            <div class="movie-grid">
-                <div class="movie-card">
-                    <div class="movie-poster">
-                        <img src="https://images.unsplash.com/photo-1489599313341-c0065ce8fad1?w=300&h=450&fit=crop" alt="Movie">
-                    </div>
-                    <div class="movie-info">
-                        <h3>The Batman</h3>
-                        <div class="movie-meta">
-                            <span>2022</span>
-                            <div class="movie-rating">
-                                <span class="star">★</span>
-                                <span>7.8</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="movie-card">
-                    <div class="movie-poster">
-                        <img src="https://images.unsplash.com/photo-1542204165-65bf26472b9b?w=300&h=450&fit=crop" alt="Movie">
-                    </div>
-                    <div class="movie-info">
-                        <h3>Top Gun: Maverick</h3>
-                        <div class="movie-meta">
-                            <span>2022</span>
-                            <div class="movie-rating">
-                                <span class="star">★</span>
-                                <span>8.3</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="movie-card">
-                    <div class="movie-poster">
-                        <img src="https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=300&h=450&fit=crop" alt="Movie">
-                    </div>
-                    <div class="movie-info">
-                        <h3>Everything Everywhere</h3>
-                        <div class="movie-meta">
-                            <span>2022</span>
-                            <div class="movie-rating">
-                                <span class="star">★</span>
-                                <span>7.8</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="movie-card">
-                    <div class="movie-poster">
-                        <img src="https://images.unsplash.com/photo-1440404653325-ab127d49abc1?w=300&h=450&fit=crop" alt="Movie">
-                    </div>
-                    <div class="movie-info">
-                        <h3>Nope</h3>
-                        <div class="movie-meta">
-                            <span>2022</span>
-                            <div class="movie-rating">
-                                <span class="star">★</span>
-                                <span>6.8</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="movie-card">
-                    <div class="movie-poster">
-                        <img src="https://images.unsplash.com/photo-1518676590629-3dcbd9c5a5c9?w=300&h=450&fit=crop" alt="Movie">
-                    </div>
-                    <div class="movie-info">
-                        <h3>Avatar: The Way of Water</h3>
-                        <div class="movie-meta">
-                            <span>2022</span>
-                            <div class="movie-rating">
-                                <span class="star">★</span>
-                                <span>7.6</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="movie-card">
-                    <div class="movie-poster">
-                        <img src="https://images.unsplash.com/photo-1536440136628-849c177e76a1?w=300&h=450&fit=crop" alt="Movie">
-                    </div>
-                    <div class="movie-info">
-                        <h3>Black Panther: Wakanda Forever</h3>
-                        <div class="movie-meta">
-                            <span>2022</span>
-                            <div class="movie-rating">
-                                <span class="star">★</span>
-                                <span>6.7</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
+    <!-- Movie Grid -->
+    <section>
+      <div class="movie-grid">
+        <img src="./../assets/interstellar.jpeg" />
+        <img src="./../assets/openh.jpeg" />
+        <img src="./../assets/superman.jpeg" />
+        <img src="./../assets/interstellar.jpeg" />
+        <img src="./../assets/superman.jpeg" />
+        <img src="./../assets/openh.jpeg" />
+        <img src="./../assets/superman.jpeg" />
+        <img src="./../assets/interstellar.jpeg" />
+        <img src="./../assets/openh.jpeg" />
+        <img src="./../assets/superman.jpeg" />
+      </div>
+      <button class="load-btn">Load More</button>
+    </section>
 
-        <section class="movie-section">
-            <div class="section-header">
-                <h2 class="section-title">Popular</h2>
-                <a href="#" class="view-all">View all</a>
-            </div>
-            <div class="movie-grid">
-                <div class="movie-card">
-                    <div class="movie-poster">
-                        <img src="https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=300&h=450&fit=crop" alt="Movie">
-                    </div>
-                    <div class="movie-info">
-                        <h3>Inception</h3>
-                        <div class="movie-meta">
-                            <span>2010</span>
-                            <div class="movie-rating">
-                                <span class="star">★</span>
-                                <span>8.8</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="movie-card">
-                    <div class="movie-poster">
-                        <img src="https://images.unsplash.com/photo-1440404653325-ab127d49abc1?w=300&h=450&fit=crop" alt="Movie">
-                    </div>
-                    <div class="movie-info">
-                        <h3>Interstellar</h3>
-                        <div class="movie-meta">
-                            <span>2014</span>
-                            <div class="movie-rating">
-                                <span class="star">★</span>
-                                <span>8.6</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="movie-card">
-                    <div class="movie-poster">
-                        <img src="https://images.unsplash.com/photo-1542204165-65bf26472b9b?w=300&h=450&fit=crop" alt="Movie">
-                    </div>
-                    <div class="movie-info">
-                        <h3>The Dark Knight</h3>
-                        <div class="movie-meta">
-                            <span>2008</span>
-                            <div class="movie-rating">
-                                <span class="star">★</span>
-                                <span>9.0</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="movie-card">
-                    <div class="movie-poster">
-                        <img src="https://images.unsplash.com/photo-1489599313341-c0065ce8fad1?w=300&h=450&fit=crop" alt="Movie">
-                    </div>
-                    <div class="movie-info">
-                        <h3>Pulp Fiction</h3>
-                        <div class="movie-meta">
-                            <span>1994</span>
-                            <div class="movie-rating">
-                                <span class="star">★</span>
-                                <span>8.9</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="movie-card">
-                    <div class="movie-poster">
-                        <img src="https://images.unsplash.com/photo-1518676590629-3dcbd9c5a5c9?w=300&h=450&fit=crop" alt="Movie">
-                    </div>
-                    <div class="movie-info">
-                        <h3>Fight Club</h3>
-                        <div class="movie-meta">
-                            <span>1999</span>
-                            <div class="movie-rating">
-                                <span class="star">★</span>
-                                <span>8.8</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="movie-card">
-                    <div class="movie-poster">
-                        <img src="https://images.unsplash.com/photo-1536440136628-849c177e76a1?w=300&h=450&fit=crop" alt="Movie">
-                    </div>
-                    <div class="movie-info">
-                        <h3>The Matrix</h3>
-                        <div class="movie-meta">
-                            <span>1999</span>
-                            <div class="movie-rating">
-                                <span class="star">★</span>
-                                <span>8.7</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
+    <!-- Horizontal Scroll Section -->
+    <section>
+      <h3 style="margin-bottom: 1rem;">💡 Recommended For You</h3>
+      <div class="scroll-movie-row">
+        <img src="https://via.placeholder.com/200x300" />
+        <img src="https://via.placeholder.com/200x300" />
+        <img src="https://via.placeholder.com/200x300" />
+      </div>
+    </section>
+  </main>
 
-        <section class="about" id="about">
-            <h2>About Stream</h2>
-            <p>The ultimate destination for movies and series. Discover, watch, and enjoy the best content from around the world.</p>
-        </section>
-    </main>
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 StreamX. All rights reserved.</p>
+  </footer>
+ <script>
+  const carousel = document.getElementById("carousel");
+  const slides = document.querySelectorAll(".carousel-slide");
+  const prevBtn = document.getElementById("prevBtn");
+  const nextBtn = document.getElementById("nextBtn");
 
-    <footer>
-        <p>&copy; 2024 Stream. All rights reserved.</p>
-    </footer>
+  let index = 0;
 
-    <script>
-       
-    </script>
+  function updateCarousel() {
+    carousel.style.transform = `translateX(-${index * 100}%)`;
+  }
+
+  nextBtn.addEventListener("click", () => {
+    index = (index + 1) % slides.length;
+    updateCarousel();
+  });
+
+  prevBtn.addEventListener("click", () => {
+    index = (index - 1 + slides.length) % slides.length;
+    updateCarousel();
+  });
+</script>
+
+
+ 
+ 
 </body>
 </html>
