@@ -28,35 +28,59 @@ function renderProducts(productsToRender) {
 }
 
 function editProduct(index) {
-    
-    modal.classList.add('active');
-    modal.querySelector('input[name="productId"]').value = products[index].id;
-    modal.querySelector('input[name="productName"]').value = products[index].name;
-    modal.querySelector('textarea[name="productDescription"]').value = products[index].description;
-    modal.querySelector('input[name="productPrice"]').value = products[index].price;
-    modal.querySelector('input[name="productCategory"]').value = products[index].category;
-    modal.setAttribute('data-index', index);
-    modalClose.addEventListener('click', () => {
-        modal.classList.remove('active');
+  modal.classList.add('active');
+  modalClose.addEventListener('click', () => {
+    modal.classList.remove('active');
     });
-    
+  modal.setAttribute('data-index', index);
 
- 
-    
-   
+  const product = products[index];
+
+  modal.querySelector('input[name="productId"]').value = product.id;
+  modal.querySelector('input[name="productName"]').value = product.name;
+  modal.querySelector('textarea[name="productDescription"]').value = product.description;
+  modal.querySelector('input[name="productPrice"]').value = product.price;
+  modal.querySelector('select[name="productCategory"]').value = product.category;
+
+  
+
+  
+  modal.querySelector('input[name="productImage"]').value = "";
+
+
 }
 
-saveButton.addEventListener('click', () => {
-    const index = modal.getAttribute('data-index');
-    products[index].name = modal.querySelector('input[name="name"]').value;
-    products[index].description = modal.querySelector('textarea[name="description"]').value;
-    products[index].price = parseFloat(modal.querySelector('input[name="price"]').value);
-    products[index].category = modal.querySelector('select[name="category"]').value;
 
-    modal.classList.remove('active');
+const editForm = document.getElementById('editForm'); // assuming your form has this id
+
+
+editForm.addEventListener('submit', (e) => {
+  e.preventDefault();
+
+  const index = modal.getAttribute('data-index');
+  const product = products[index];
+
+  product.name = editForm.querySelector('input[name="productName"]').value;
+  product.description = editForm.querySelector('textarea[name="productDescription"]').value;
+  product.price = parseFloat(editForm.querySelector('input[name="productPrice"]').value);
+  product.category = editForm.querySelector('input[name="productCategory"]').value;
+
+  const fileInput = editForm.querySelector('input[name="productImage"]');
+  const file = fileInput.files[0];
+
+  if (file) {
+    const reader = new FileReader();
+    reader.onload = (event) => {
+      product.image = event.target.result;
+      renderProducts(products);
+      modal.classList.remove('active');
+    };
+    reader.readAsDataURL(file);
+  } else {
     renderProducts(products);
+    modal.classList.remove('active');
+  }
 });
-
 function deleteProduct(index) {
     if (confirm(`Are you sure you want to delete ${products[index].name}?`)) {
         products.splice(index, 1);
