@@ -10,9 +10,9 @@ function renderProducts(productsToRender) {
         const card = document.createElement('div');
         card.className = 'product-card';
         card.innerHTML = `
-            <div class="product-image">${product.image}</div>
-            <h2>${product.name}</h2>
-            <p>${product.description}</p>
+            <div class="product-image"><img src="${product.image}" alt="${product.name}"></div>
+            <h2 class="name">${product.name}</h2>
+            <p class="description">${product.description}</p>
             <p class="price">$${product.price}</p>
             <div class="product-actions">
                 <button class="btn btn-edit" data-index="${index}">Edit</button>
