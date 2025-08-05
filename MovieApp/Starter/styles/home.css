@@ -41,14 +41,19 @@
       color: #ccc;
       font-weight: 600;
     }
-
+    main {
+      width: 100%;
+      padding: 0 !important;
+      margin: 0 auto !important;
+    }
     /* Carousel */
-    .carousel-container {
+  .carousel-container {
   position: relative;
-  max-width: 1200px;
-  height: 400px;
-  overflow: hidden;
-  margin-top: 1rem;
+  width: 100%;
+  
+  height: 800px;
+  
+  
   border-radius: 0.5rem;
 }
 
@@ -62,7 +67,7 @@
 .carousel-slide {
   min-width: 100%;
   height: 100%;
-  background-size: cover;
+  background-size: contain;
   background-position: center;
   position: relative;
   display: flex;
@@ -122,11 +127,7 @@
 }
 
     /* Main Container */
-    main {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 1rem;
-    }
+   
 
     section {
       margin-bottom: 2rem;
