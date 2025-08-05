@@ -24,33 +24,63 @@
   </header>
 
   <main>
-    <!--Add Carousel-->
-<div class="carousel-container">
-  <div class="carousel-wrapper" id="carousel">
-    <div class="carousel-slide" style="background-image: url('./../assets/interstellar.jpeg');">
-      <div class="content">
-        <h2>Interstellar</h2>
-        <p>Journey beyond the stars.</p>
-      </div>
-    </div>
-    <div class="carousel-slide" style="background-image: url('./../assets/openh.jpeg');">
-      <div class="content">
-        <h2>Oppenheimer</h2>
-        <p>The father of the atomic bomb.</p>
-      </div>
-    </div>
-    <div class="carousel-slide" style="background-image: url('./../assets/superman.jpeg');">
-      <div class="content">
-        <h2>Superman</h2>
-        <p>The Man of Steel returns.</p>
-      </div>
-    </div>
-  </div>
+  <div class="carousel-container">
+        <div class="carousel-wrapper" id="carousel">
+            <div class="carousel-slide" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.7)), url('./../assets/interstellarbg.jpeg');">
+                <div class="content">
+                    <div class="thumbnail">
+                        <img src="./../assets/interstellar.jpeg" alt="Interstellar Poster" />
+                    </div>
+                    <div class="text-content">
+                        <h2>Interstellar</h2>
+                        <p>A team of explorers travel through a wormhole in space in an attempt to ensure humanity's survival. Journey beyond the stars in this epic space odyssey.</p>
+                        <button class="watch-btn">Watch Now</button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="carousel-slide" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.7)), url('./../assets/supermanbg.jpeg');">
+                <div class="content">
+                    <div class="thumbnail">
+                        <img src="./../assets/superman.jpeg" alt="Oppenheimer Poster" />
+                    </div>
+                    <div class="text-content">
+                      <h2>Superman</h2>
+                        <p>The Last Son of Krypton returns to protect Earth from new threats. Experience the legendary hero's greatest adventure as the Man of Steel soars again.</p>
+                     
+                        <button class="watch-btn">Watch Now</button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="carousel-slide" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.7)), url('./../assets/openHbg.jpeg');">
+                <div class="content">
+                    <div class="thumbnail">
+                        <img src="./../assets/openH.jpeg" alt="Superman Poster" />
+                    </div>
+                    <div class="text-content">
+                       <h2>Oppenheimer</h2>
+                        <p>The story of American scientist J. Robert Oppenheimer and his role in the development of the atomic bomb. A gripping tale of science, politics, and moral responsibility.</p>
+                       <button class="watch-btn">Watch Now</button>
+                    </div>
+                </div>
+            </div>
+        </div>
 
-  <!-- Controls -->
-  <button class="carousel-btn left" id="prevBtn">&#10094;</button>
-  <button class="carousel-btn right" id="nextBtn">&#10095;</button>
-</div>
+        <!-- Navigation Buttons -->
+        <button class="carousel-btn left" id="prevBtn">&#10094;</button>
+        <button class="carousel-btn right" id="nextBtn">&#10095;</button>
+
+        <!-- Indicators -->
+        <div class="indicators" id="indicators">
+            <div class="indicator active" data-slide="0"></div>
+            <div class="indicator" data-slide="1"></div>
+            <div class="indicator" data-slide="2"></div>
+        </div>
+
+        <!-- Progress Bar -->
+        <div class="progress-bar" id="progressBar"></div>
+    </div>
 
 
     <!-- Description -->
@@ -91,39 +121,220 @@
     <section>
       <h3 style="margin-bottom: 1rem;">💡 Recommended For You</h3>
       <div class="scroll-movie-row">
-        <img src="https://via.placeholder.com/200x300" />
-        <img src="https://via.placeholder.com/200x300" />
-        <img src="https://via.placeholder.com/200x300" />
+        <img src="./../assets/interstellar.jpeg" />
+        <img src="./../assets/superman.jpeg" />
+        <img src="./../assets/openh.jpeg" />
+        <img src="./../assets/interstellar.jpeg" />
+        <img src="./../assets/superman.jpeg" />
+        <img src="./../assets/openh.jpeg" />
+        <img src="./../assets/interstellar.jpeg" />
+        <img src="./../assets/superman.jpeg" />
+        <img src="./../assets/openh.jpeg" />
       </div>
     </section>
+     <!--Genres-->
+    <section>
+      <h3 style="margin-bottom: 1rem;">🎬 Genres</h3>
+      <div class="genre-row">
+        <div class="genre-item">
+          <h4>Action</h4>
+        </div>
+        <div class="genre-item">
+          <h4>Comedy</h4>
+        </div>
+        <div class="genre-item">
+          <h4>Drama</h4>
+        </div>
+        <div class="genre-item">
+
+          <h4>Horror</h4>
+        </div>
+        <div class="genre-item">
+  
+          <h4>Romance</h4>
+        </div>
+      </div>
+    </section>
+
+    <!--Top 10 Movies in 3 categories Grid-->
+    <section>
+      <h3 style="margin-bottom: 1rem;">🏆 Top 10 Movies</h3>
+      <div class="top-movies-grid">
+        <div class="top-movie-item">
+          <h2>Action</h2>
+          <div class="movie-items">
+            <img src="./../assets/interstellar.jpeg" alt="Interstellar" />
+            <h4>Interstellar</h4>
+          </div>
+           <div class="movie-items">
+            <img src="./../assets/interstellar.jpeg" alt="Interstellar" />
+            <h4>Interstellar</h4>
+          </div>
+           <div class="movie-items">
+            <img src="./../assets/interstellar.jpeg" alt="Interstellar" />
+            <h4>Interstellar</h4>
+          </div>
+           <div class="movie-items">
+            <img src="./../assets/interstellar.jpeg" alt="Interstellar" />
+            <h4>Interstellar</h4>
+          </div>
+        </div>
+        <div class="top-movie-item">
+          <h2>Comedy</h2>
+          <div class="movie-items">
+          <img src="./../assets/superman.jpeg" alt="Superman" />
+          <h4>Superman</h4>
+          </div>
+          <div class="movie-items">
+          <img src="./../assets/superman.jpeg" alt="Superman" />
+          <h4>Superman</h4>
+          </div>
+          <div class="movie-items">
+          <img src="./../assets/superman.jpeg" alt="Superman" />
+          <h4>Superman</h4>
+          </div>
+          <div class="movie-items">
+          <img src="./../assets/superman.jpeg" alt="Superman" />
+          <h4>Superman</h4>
+          </div>
+        </div>
+        <div class="top-movie-item">
+          <div class="movie-items">
+          <img src="./../assets/openh.jpeg" alt="Oppenheimer" />
+          <h4>Oppenheimer</h4>
+          </div>
+            <div class="movie-items">
+          <img src="./../assets/openh.jpeg" alt="Oppenheimer" />
+          <h4>Oppenheimer</h4>
+          </div>
+            <div class="movie-items">
+          <img src="./../assets/openh.jpeg" alt="Oppenheimer" />
+          <h4>Oppenheimer</h4>
+          </div>
+            <div class="movie-items">
+          <img src="./../assets/openh.jpeg" alt="Oppenheimer" />
+          <h4>Oppenheimer</h4>
+          </div>
+        </div>
+
   </main>
 
   <!-- Footer -->
   <footer>
     <p>&copy; 2025 StreamX. All rights reserved.</p>
   </footer>
- <script>
-  const carousel = document.getElementById("carousel");
-  const slides = document.querySelectorAll(".carousel-slide");
-  const prevBtn = document.getElementById("prevBtn");
-  const nextBtn = document.getElementById("nextBtn");
-
-  let index = 0;
-
-  function updateCarousel() {
-    carousel.style.transform = `translateX(-${index * 100}%)`;
-  }
-
-  nextBtn.addEventListener("click", () => {
-    index = (index + 1) % slides.length;
-    updateCarousel();
-  });
-
-  prevBtn.addEventListener("click", () => {
-    index = (index - 1 + slides.length) % slides.length;
-    updateCarousel();
-  });
-</script>
+<script>
+        class MovieCarousel {
+            constructor() {
+                this.currentSlide = 0;
+                this.totalSlides = 3;
+                this.autoSlideInterval = 5000; // 5 seconds
+                this.autoSlideTimer = null;
+                
+                this.carousel = document.getElementById('carousel');
+                this.prevBtn = document.getElementById('prevBtn');
+                this.nextBtn = document.getElementById('nextBtn');
+                this.indicators = document.querySelectorAll('.indicator');
+                this.progressBar = document.getElementById('progressBar');
+                
+                this.init();
+            }
+            
+            init() {
+                this.prevBtn.addEventListener('click', () => this.prevSlide());
+                this.nextBtn.addEventListener('click', () => this.nextSlide());
+                
+                this.indicators.forEach((indicator, index) => {
+                    indicator.addEventListener('click', () => this.goToSlide(index));
+                });
+                
+                // Touch/swipe support
+                let startX = 0;
+                let endX = 0;
+                
+                this.carousel.addEventListener('touchstart', (e) => {
+                    startX = e.touches[0].clientX;
+                });
+                
+                this.carousel.addEventListener('touchend', (e) => {
+                    endX = e.changedTouches[0].clientX;
+                    if (startX - endX > 50) this.nextSlide();
+                    if (endX - startX > 50) this.prevSlide();
+                });
+                
+                // Keyboard navigation
+                document.addEventListener('keydown', (e) => {
+                    if (e.key === 'ArrowLeft') this.prevSlide();
+                    if (e.key === 'ArrowRight') this.nextSlide();
+                });
+                
+                // Pause auto-slide on hover
+                this.carousel.addEventListener('mouseenter', () => this.pauseAutoSlide());
+                this.carousel.addEventListener('mouseleave', () => this.startAutoSlide());
+                
+                this.startAutoSlide();
+            }
+            
+            goToSlide(slideIndex) {
+                this.currentSlide = slideIndex;
+                this.updateCarousel();
+                this.updateIndicators();
+                this.resetProgressBar();
+            }
+            
+            nextSlide() {
+                this.currentSlide = (this.currentSlide + 1) % this.totalSlides;
+                this.updateCarousel();
+                this.updateIndicators();
+                this.resetProgressBar();
+            }
+            
+            prevSlide() {
+                this.currentSlide = (this.currentSlide - 1 + this.totalSlides) % this.totalSlides;
+                this.updateCarousel();
+                this.updateIndicators();
+                this.resetProgressBar();
+            }
+            
+            updateCarousel() {
+                const translateX = -this.currentSlide * 100;
+                this.carousel.style.transform = `translateX(${translateX}%)`;
+            }
+            
+            updateIndicators() {
+                this.indicators.forEach((indicator, index) => {
+                    indicator.classList.toggle('active', index === this.currentSlide);
+                });
+            }
+            
+            startAutoSlide() {
+                this.pauseAutoSlide();
+                this.resetProgressBar();
+                this.autoSlideTimer = setInterval(() => {
+                    this.nextSlide();
+                }, this.autoSlideInterval);
+            }
+            
+            pauseAutoSlide() {
+                if (this.autoSlideTimer) {
+                    clearInterval(this.autoSlideTimer);   
+                    this.autoSlideTimer = null;
+                }
+                this.progressBar.style.animation = 'none';
+            }
+            
+            resetProgressBar() {
+                this.progressBar.style.animation = 'none';
+                this.progressBar.offsetHeight; // Trigger reflow
+                this.progressBar.style.animation = 'progress 5s linear';
+            }
+        }
+        
+        // Initialize carousel when DOM is loaded
+        document.addEventListener('DOMContentLoaded', () => {
+            new MovieCarousel();
+        });
+    </script>
 
 
  
