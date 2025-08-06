@@ -524,28 +524,37 @@ section h3 {
 /*TOP mOVIES gRID 3 columns*/
 .top-movies-grid {
     display: grid;
+
     grid-template-columns: repeat(3, 1fr);
-    gap: 2rem;
+    gap: 6rem;
     padding: 2rem;
+    place-items: center; 
+    
     max-width: 1400px;
     margin: 0 auto;
 }
 .top-movies-item {
     position: relative;
     overflow: hidden;
+    display: flex;
+    justify-content: center;
+
+    align-items: center;
     border-radius: 15px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
 }
 .movie-items{
     width: 150px;
     height: 250px;
+    margin-bottom: 10px;
     object-fit: cover;
     border-radius: 15px;
     transition: all 0.3s ease;
+    text-align: center;
 }
 .movie-items img{
     width: 100%;
-    height: 100%;
+    height: 90%;
     object-fit: cover;
     border-radius: 15px;
     transition: all 0.3s ease;
@@ -558,6 +567,25 @@ section h3 {
     border-color: rgba(255, 107, 53, 0.3);
 }
 
+.hero {
+  display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.5);
+  background-image: url('./../assets/hero.jpeg');
+    background-size: cover;
+    background-position: contain;
+    background-repeat: no-repeat;
+    height: 600px;
+  
+    padding: 6rem 2rem;
+    text-align: center;
+    border-radius: 25px;
+    margin-top: 2rem;
+}
 
 /* Footer */
 footer {
