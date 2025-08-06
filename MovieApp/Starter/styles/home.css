@@ -500,6 +500,8 @@ section h3 {
     display: flex;
     gap: 1.5rem;
     overflow-x: auto;
+    align-items: center;
+    justify-content: center;
     padding: 1rem;
     scrollbar-width: thin;
     scrollbar-color: #ff6b35 rgba(255, 255, 255, 0.1);
@@ -526,9 +528,10 @@ section h3 {
     display: grid;
 
     grid-template-columns: repeat(3, 1fr);
-    gap: 6rem;
+    gap: 4rem;
     padding: 2rem;
     place-items: center; 
+    
     
     max-width: 1400px;
     margin: 0 auto;
@@ -538,6 +541,8 @@ section h3 {
     overflow: hidden;
     display: flex;
     justify-content: center;
+    border: 20px solid rgb(255, 255, 255);
+     
 
     align-items: center;
     border-radius: 15px;
@@ -548,6 +553,7 @@ section h3 {
     height: 250px;
     margin-bottom: 10px;
     object-fit: cover;
+    
     border-radius: 15px;
     transition: all 0.3s ease;
     text-align: center;
@@ -575,9 +581,9 @@ section h3 {
     color: white;
     text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
     background-color: rgba(0, 0, 0, 0.5);
-  background-image: url('./../assets/hero.jpeg');
+  background-image: url('./../assets/Hero.jpeg');
     background-size: cover;
-    background-position: contain;
+    background-position: center;
     background-repeat: no-repeat;
     height: 600px;
   
