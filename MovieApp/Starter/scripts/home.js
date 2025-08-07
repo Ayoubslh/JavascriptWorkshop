@@ -1,3 +1,8 @@
+ import {MovieCarousel} from "./CarouselClass.js";
+
+
+ const carouselContainer = document.getElementById('carouselContainer');
+
  // Smooth scroll for navigation
         document.querySelectorAll('nav a').forEach(link => {
             link.addEventListener('click', (e) => {
@@ -25,4 +30,9 @@
                 const genre = category.querySelector('h3').textContent;
                 console.log(`Browsing: ${genre}`);
             });
+        });
+        document.addEventListener('DOMContentLoaded', () => {
+
+            const carousel = new MovieCarousel('carouselContainer');
+
         });
