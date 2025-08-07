@@ -1,4 +1,6 @@
  import {MovieCarousel} from "./CarouselClass.js";
+ import {movies} from "../assets/data/data.js";
+ import renderMovies from "./RenderMovieCard.js";
 
 
  const carouselContainer = document.getElementById('carouselContainer');
@@ -34,5 +36,11 @@
         document.addEventListener('DOMContentLoaded', () => {
 
             const carousel = new MovieCarousel('carouselContainer');
+            renderMovies(movies, document.getElementById('movieGrid'));
+            renderMovies(movies, document.getElementById('recommendedMovies'));
+            
+            renderMovies(movies, document.getElementById('actionMovies'));
+            renderMovies(movies, document.getElementById('comedyMovies'));
+            renderMovies(movies, document.getElementById('dramaMovies'));
 
         });

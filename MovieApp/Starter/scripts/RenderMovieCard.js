@@ -1,4 +1,5 @@
  function renderMovies(moviesToRender, parentElement) {
+
             const grid = parentElement;
             grid.innerHTML = '';
             

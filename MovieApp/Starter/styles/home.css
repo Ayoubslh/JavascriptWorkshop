@@ -406,22 +406,90 @@ main {
     margin: 0 auto;
 }
 
-.movie-grid img {
-    width: 100%;
-    height: 350px;
-    object-fit: cover;
-    border-radius: 15px;
-    transition: all 0.3s ease;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-    border: 2px solid rgba(255, 255, 255, 0.1);
-    cursor: pointer;
-}
 
-.movie-grid img:hover {
-    transform: translateY(-10px) scale(1.02);
-    box-shadow: 0 20px 40px rgba(255, 107, 53, 0.2);
-    border-color: rgba(255, 107, 53, 0.3);
-}
+
+
+        .movie-card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            padding: 1.5rem;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            position: relative;
+            
+        }
+        
+        
+        
+        .movie-card:hover::before {
+            left: 100%;
+        }
+        
+        .movie-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(255, 107, 53, 0.2);
+            border-color: rgba(255, 107, 53, 0.3);
+        }
+        
+        .movie-poster {
+            width: 100%;
+            height: 250px;
+         
+            border-radius: 15px;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+            color: white;
+            position: relative;
+            overflow: hidden;
+           
+        }
+        .movie-poster img{
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            border-radius: 15px;
+            transition: transform 0.3s ease;
+        }
+        
+       
+        
+        .movie-title {
+            font-size: 1.3rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            color: #ffffff;
+        }
+        
+        .movie-info {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1rem;
+            font-size: 0.9rem;
+            color: #aaa;
+        }
+        
+        .movie-rating {
+            display: flex;
+            align-items: center;
+            gap: 0.25rem;
+            color: #ffd700;
+        }
+        
+        .movie-description {
+            font-size: 0.9rem;
+            color: #c0c0c0;
+            line-height: 1.4;
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
 
 /* Load More Button */
 .load-btn {
