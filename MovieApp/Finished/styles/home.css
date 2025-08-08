@@ -602,7 +602,7 @@ section h3 {
 
 /*TOP mOVIES gRID 3 columns*/
 .top-movies{
-    height: 500dvh;
+    height: 300dvh;
     overflow-y: scroll;
     scrollbar-width: thin;
     scrollbar-color: #ff6b35 rgba(255, 255, 255, 0.1);

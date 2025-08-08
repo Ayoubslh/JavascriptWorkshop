@@ -1,3 +1,4 @@
+const IMG_BASE = 'https://image.tmdb.org/t/p/w500';
 export class MovieCarousel {
     constructor(containerId, movies = []) {
         this.container = document.getElementById(containerId);
@@ -68,15 +69,15 @@ export class MovieCarousel {
     createSlide(movie, index) {
         return `
             <div class="carousel-slide" 
-                 style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.7)), url('${movie.background}');">
+                 style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.7)), url('${IMG_BASE}${movie.backdrop_path}');">
                 <div class="content">
                     <div class="thumbnail">
-                        <img src="${movie.poster}" alt="${movie.title} Poster" />
+                        <img src="${IMG_BASE}${movie.poster_path}" alt="${movie.title} Poster" />
                     </div>
                     <div class="text-content">
                         <h2>${movie.title}</h2>
-                        <p>${movie.description}</p>
-                        
+                        <p>${movie.overview}</p>
+
                     </div>
                 </div>
             </div>

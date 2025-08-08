@@ -1,5 +1,5 @@
 
-
+const IMG_BASE = 'https://image.tmdb.org/t/p/w500';
 function renderMovies(moviesToRender, parentElement) {
 
             const grid = parentElement;
@@ -9,13 +9,13 @@ function renderMovies(moviesToRender, parentElement) {
                 const movieCard = document.createElement('div');
                 movieCard.className = 'movie-card';
                 movieCard.innerHTML = `
-                    <div class="movie-poster"><img src="${movie.poster}" alt="${movie.title}"></div>
+                    <div class="movie-poster"><img src="${IMG_BASE}${movie.poster_path}" alt="${movie.title}"></div>
                     <h3 class="movie-title">${movie.title}</h3>
                     <div class="movie-info">
-                        <span>${movie.year}</span>
-                        <div class="movie-rating">⭐ ${movie.rating}</div>
+                        <span>${movie.release_date.split('-')[0]}</span>
+                        <div class="movie-rating">⭐ ${movie.vote_average}</div>
                     </div>
-                    <p class="movie-description">${movie.description}</p>
+                    <p class="movie-description">${movie.overview}</p>
                 `;
                 
                 movieCard.addEventListener('click', () => {

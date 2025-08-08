@@ -1,6 +1,7 @@
-import { movies } from './../assets/data/data.js';
-import renderMovies from "./RenderMovieCard.js";
 
+import { fetchPopularMovies } from './apifetch.js';
+import renderMovies from "./RenderMovieCard.js";
+let movies = [];
 document.querySelectorAll('.filter-btn').forEach(btn => {
     btn.addEventListener('click', (e) => filterByGenre(e, btn.dataset.genre));
 });
@@ -16,7 +17,7 @@ document.querySelectorAll('.discover-links a').forEach(link => {
     if (genre === 'all') {
         renderMovies(movies, document.getElementById('moviesGrid'));
     } else {
-        const filtered = movies.filter(movie => movie.genre === genre);
+        const filtered = movies.filter(movie => movie.genre_ids.includes(+genre));
           renderMovies(filtered, document.getElementById('moviesGrid'));
     }
 }
@@ -54,13 +55,17 @@ function filterMovies(event, type) {
         }
 
 document.addEventListener('DOMContentLoaded', () => {
-    renderMovies(movies, document.getElementById('moviesGrid'));
-
-     let currentFilter = 'all';
-        
    
+    fetchPopularMovies().then(data => {
+        movies = data;    
+        console.log(movies); // Array of movie objects
+        renderMovies(movies, document.getElementById('moviesGrid'));
 
-        
+    });
+     
+    let currentFilter = 'all';
+
+
         // Show page
         createBackgroundAnimation();
         document.querySelectorAll('.filter-btn').forEach(btn => {
@@ -77,6 +82,6 @@ document.querySelectorAll('.discover-links a').forEach(link => {
         searchBox.addEventListener('input', (event) => {
             const query = event.target.value.toLowerCase();
             const filtered = movies.filter(movie => movie.title.toLowerCase().includes(query));
-            renderMovies(filtered);
+            renderMovies(filtered, document.getElementById('moviesGrid'));
             });
 });
