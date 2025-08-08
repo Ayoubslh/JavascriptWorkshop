@@ -602,10 +602,13 @@ section h3 {
 
 /*TOP mOVIES gRID 3 columns*/
 .top-movies{
-    height: 200dvh;
+    height: 500dvh;
     overflow-y: scroll;
     scrollbar-width: thin;
     scrollbar-color: #ff6b35 rgba(255, 255, 255, 0.1);
+    display: flex;
+    flex-direction: column;
+    
 }
 .top-movies::-webkit-scrollbar {
     height: 8px;
@@ -622,8 +625,7 @@ section h3 {
 }
 .top-movies-grid {
     display: grid;
-
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(3, 200px);
     gap: 4rem;
     padding: 2rem;
     place-items: center; 

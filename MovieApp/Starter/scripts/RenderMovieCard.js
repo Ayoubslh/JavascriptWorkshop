@@ -1,4 +1,6 @@
- function renderMovies(moviesToRender, parentElement) {
+
+
+function renderMovies(moviesToRender, parentElement) {
 
             const grid = parentElement;
             grid.innerHTML = '';
@@ -16,10 +18,16 @@
                     <p class="movie-description">${movie.description}</p>
                 `;
                 
-                movieCard.addEventListener('click', () => showMovieDetails(movie));
+                movieCard.addEventListener('click', () => {
+  window.location.href = `./../pages/details.html?id=${movie.id}`;
+});
                 grid.appendChild(movieCard);
             });
         }
+
+        
+         
+      
 
 
 export default renderMovies;

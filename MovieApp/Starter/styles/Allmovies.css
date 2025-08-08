@@ -515,7 +515,32 @@
             border-color: rgba(255, 107, 53, 0.3);
             transform: translateX(-5px);
         }
-        
+#movie-details {
+    display: none;
+}
+
+#movie-details.active {
+    display: block;
+}
+
+#all-movies.hidden {
+    display: none;
+}
+
+
+
+        footer {
+    background: linear-gradient(135deg, rgba(255, 107, 53, 0.1) 0%, rgba(247, 147, 30, 0.1) 100%);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    text-align: center;
+    padding: 3rem 0;
+    margin-top: 4rem;
+}
+
+footer p {
+    color: #aaa;
+    font-size: 1rem;
+}
         /* Responsive */
         @media (max-width: 768px) {
             .container {
