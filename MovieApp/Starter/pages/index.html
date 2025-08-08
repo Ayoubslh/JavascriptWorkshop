@@ -155,7 +155,7 @@
     <!--Top 5 Movies in 3 categories Grid-->
     <section>
       <h3 style="margin-bottom: 1rem;">🏆 Top 5 Movies</h3>
-      <div class="grid-container">
+      <div class="grid-container top-movies">
       <div class="top-movies-grid">
         <div class="top-movie-item">
           <h2>Action</h2>
@@ -200,7 +200,7 @@
           <h4>Superman</h4>-->
           </div> 
         </div>
-        <div class="top-movie-item" id="dramaMovies">
+        <div class="top-movie-item" >
           <h2>Drama</h2>
           <div class="movie-items" id="dramaMovies">
           <!-- <img src="./../assets/openh.jpeg" alt="Oppenheimer" />
@@ -219,8 +219,8 @@
           <h4>Oppenheimer</h4> -->
           </div>
         </div>
-       
-        </div>
+       </div>
+      </div>
     </section>
 
     <section>
@@ -238,118 +238,6 @@
   <footer>
     <p>&copy; 2025 StreamX. All rights reserved.</p>
   </footer>
-<script>
-        class MovieCarousel {
-            constructor() {
-                this.currentSlide = 0;
-                this.totalSlides = 3;
-                this.autoSlideInterval = 5000; // 5 seconds
-                this.autoSlideTimer = null;
-                
-                this.carousel = document.getElementById('carousel');
-                this.prevBtn = document.getElementById('prevBtn');
-                this.nextBtn = document.getElementById('nextBtn');
-                this.indicators = document.querySelectorAll('.indicator');
-                this.progressBar = document.getElementById('progressBar');
-                
-                this.init();
-            }
-            
-            init() {
-                this.prevBtn.addEventListener('click', () => this.prevSlide());
-                this.nextBtn.addEventListener('click', () => this.nextSlide());
-                
-                this.indicators.forEach((indicator, index) => {
-                    indicator.addEventListener('click', () => this.goToSlide(index));
-                });
-                
-                // Touch/swipe support
-                let startX = 0;
-                let endX = 0;
-                
-                this.carousel.addEventListener('touchstart', (e) => {
-                    startX = e.touches[0].clientX;
-                });
-                
-                this.carousel.addEventListener('touchend', (e) => {
-                    endX = e.changedTouches[0].clientX;
-                    if (startX - endX > 50) this.nextSlide();
-                    if (endX - startX > 50) this.prevSlide();
-                });
-                
-                // Keyboard navigation
-                document.addEventListener('keydown', (e) => {
-                    if (e.key === 'ArrowLeft') this.prevSlide();
-                    if (e.key === 'ArrowRight') this.nextSlide();
-                });
-                
-                // Pause auto-slide on hover
-                this.carousel.addEventListener('mouseenter', () => this.pauseAutoSlide());
-                this.carousel.addEventListener('mouseleave', () => this.startAutoSlide());
-                
-                this.startAutoSlide();
-            }
-            
-            goToSlide(slideIndex) {
-                this.currentSlide = slideIndex;
-                this.updateCarousel();
-                this.updateIndicators();
-                this.resetProgressBar();
-            }
-            
-            nextSlide() {
-                this.currentSlide = (this.currentSlide + 1) % this.totalSlides;
-                this.updateCarousel();
-                this.updateIndicators();
-                this.resetProgressBar();
-            }
-            
-            prevSlide() {
-                this.currentSlide = (this.currentSlide - 1 + this.totalSlides) % this.totalSlides;
-                this.updateCarousel();
-                this.updateIndicators();
-                this.resetProgressBar();
-            }
-            
-            updateCarousel() {
-                const translateX = -this.currentSlide * 100;
-                this.carousel.style.transform = `translateX(${translateX}%)`;
-            }
-            
-            updateIndicators() {
-                this.indicators.forEach((indicator, index) => {
-                    indicator.classList.toggle('active', index === this.currentSlide);
-                });
-            }
-            
-            startAutoSlide() {
-                this.pauseAutoSlide();
-                this.resetProgressBar();
-                this.autoSlideTimer = setInterval(() => {
-                    this.nextSlide();
-                }, this.autoSlideInterval);
-            }
-            
-            pauseAutoSlide() {
-                if (this.autoSlideTimer) {
-                    clearInterval(this.autoSlideTimer);   
-                    this.autoSlideTimer = null;
-                }
-                this.progressBar.style.animation = 'none';
-            }
-            
-            resetProgressBar() {
-                this.progressBar.style.animation = 'none';
-                this.progressBar.offsetHeight; // Trigger reflow
-                this.progressBar.style.animation = 'progress 5s linear';
-            }
-        }
-        
-        // Initialize carousel when DOM is loaded
-        document.addEventListener('DOMContentLoaded', () => {
-            new MovieCarousel();
-        });
-    </script>
 
 
  

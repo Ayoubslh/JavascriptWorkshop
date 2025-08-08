@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>StreamOus - Movies</title>
     <link rel="stylesheet" href="../styles/Allmovies.css">
+    <script src="../scripts/Allmovies.js" defer type="module"></script>
    
 </head>
 <body>
@@ -110,99 +111,7 @@
     </main>
     
     <script>
-        // Sample movie data matching the theme
-        const movies = [
-            {
-                id: 1,
-                title: "Interstellar",
-                poster:"./../assets/interstellar.jpeg",
-                year: 2014,
-                genre: "sci-fi",
-                rating: 8.7,
-                duration: "169 min",
-                description: "A team of explorers travel through a wormhole in space in an attempt to ensure humanity's survival. Journey beyond the stars in this epic space odyssey that explores love, sacrifice, and the mysteries of the cosmos."
-            },
-            {
-                id: 2,
-                title: "Oppenheimer",
-                poster:"./../assets/openh.jpeg",
-                year: 2023,
-                genre: "drama",
-                rating: 8.4,
-                duration: "180 min",
-                description: "The story of American scientist J. Robert Oppenheimer and his role in the development of the atomic bomb. A gripping tale of science, politics, and moral responsibility during World War II."
-            },
-            {
-                id: 3,
-                title: "Superman Legacy",
-                poster:"./../assets/superman.jpeg",
-                year: 2023,
-                genre: "action",
-                rating: 8.2,
-                duration: "142 min",
-                description: "The Last Son of Krypton returns to protect Earth from new threats. Experience the legendary hero's greatest adventure as the Man of Steel soars again with hope and determination."
-            },
-            {
-                id: 4,
-                title: "The Dark Knight",
-                poster:"./../assets/openh.jpeg",
-                year: 2008,
-                genre: "action",
-                rating: 9.0,
-                duration: "152 min",
-                description: "Batman faces his greatest psychological and physical tests when the Joker emerges as a formidable new threat to Gotham City. A masterpiece of superhero cinema."
-            },
-            {
-                id: 5,
-                title: "Inception",
-                poster:"./../assets/openh.jpeg",
-                year: 2010,
-                genre: "sci-fi",
-                rating: 8.8,
-                duration: "148 min",
-                description: "A thief who enters people's dreams to steal their secrets gets the ultimate assignment: planting an idea instead of stealing one in this mind-bending thriller."
-            },
-            {
-                id: 6,
-                title: "Parasite",
-                poster:"./../assets/openh.jpeg",
-                year: 2019,
-                genre: "thriller",
-                rating: 8.6,
-                duration: "132 min",
-                description: "A poor family schemes to become employed by a wealthy family by infiltrating their household and posing as unrelated, highly qualified individuals."
-            },
-            {
-                id: 7,
-                title: "The Grand Budapest Hotel",
-                poster:"./../assets/openh.jpeg",
-                year: 2014,
-                genre: "comedy",
-                rating: 8.1,
-                duration: "99 min",
-                description: "The adventures of Gustave H, a legendary concierge at a famous European hotel, and his protégé Zero Moustafa in this whimsical comedy-drama."
-            },
-            {
-                id: 8,
-                title: "Dune",
-                poster:"./../assets/openh.jpeg",
-                year: 2021,
-                genre: "sci-fi",
-                rating: 8.0,
-                duration: "155 min",
-                description: "Paul Atreides arrives on the desert planet Arrakis to secure the future of his family and people, becoming embroiled in a struggle for control of the galaxy's most precious resource."
-            },
-            {
-                id: 9,
-                title: "Joker",
-                poster:"./../assets/openh.jpeg",
-                year: 2019,
-                genre: "drama",
-                rating: 8.4,
-                duration: "122 min",
-                description: "A failed comedian begins his descent into madness when he's disregarded and mistreated by society, leading to his transformation into the criminal mastermind known as the Joker."
-            }
-        ];
+       
         
         let currentFilter = 'all';
         
